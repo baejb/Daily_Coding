@@ -9,7 +9,7 @@ function solution(begin, target, words) {
         console.log(plus);
         if(word === target) {
             answer = plus;
-            return  ;
+            return;
         }
         if(plus > words.length){
             return 
@@ -27,8 +27,8 @@ function solution(begin, target, words) {
         if(count ===1){ //하나만 바뀐거
             if(!visited.includes(words[i])){
                 visited.push(words[i]);
-                console.log(words[i]);
                 dfs(words[i],plus+1);
+                visited.pop();
             }
             }
     }
