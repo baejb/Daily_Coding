@@ -3,7 +3,7 @@ function solution(tickets) {
     const result = [];
     const visited = [];
   
-    tickets.sort();
+    tickets.sort(); //같은 도착지가 있을 때 순서 대로 정렬 
   
     const len = tickets.length;
     const dfs = (str, count) => {
