@@ -10,11 +10,11 @@ const fs = require('fs');
 const [n, ...input] = fs.readFileSync('example.txt').toString().trim().split('\n');
 
 let last = input[n-1];
-let ans = [];
+let ans = 1;
 for(let i = 0; i<input.length; i++){
     if(last < input[i]){
-        ans.push(input[i]);
+        ans++;
     }
 }
-console.log(ans.length);
+console.log(ans);
 
