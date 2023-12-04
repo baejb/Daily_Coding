@@ -1,12 +1,5 @@
-// 5 5 3
-// 5 4
-// 5 2
-// 1 2
-// 3 4
-// 3 1
-
 const fs = require('fs');
-const input = fs.readFileSync('example.txt').toString().trim().split('\n');
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
 const [N, M, V] = input[0].split(' ').map(Number); // 첫 번째 줄의 값을 N, M, V로 분리하여 저장
 
@@ -55,8 +48,7 @@ function dfs(node ,visited) {
 }
 let bfsVisited = [];
 let answerBfs = [];
-function bfs(node ,visited) { 
-
+function bfs(node , visited) { 
     let queue = [node];
     visited[node] = true;
   
@@ -68,13 +60,12 @@ function bfs(node ,visited) {
           visited[neighbor] = true;
         }
       }
-      console.log(current);
       answerBfs.push(current);
     }   
     return answerBfs.join(" ");
   }
 
 console.log(dfs(V,dfsVisited));
-console.log(bfs(V, bfsVisited));
+console.log(bfs(V,bfsVisited));
 
 
