@@ -12,7 +12,7 @@ for (let i = 1; i <= M; i++) {
 // console.log(N, M, V); // N, M, V 출력
 // console.log(edges); // 변(Edge) 정보 출력
 let graph = {}
-
+1: [2,3]
 edges.forEach(([n1 , n2 ])=> {
     if(!graph[n1]){
         graph[n1] = [];
