@@ -13,7 +13,7 @@ let dx = [0, 0, -1, 1];
 let answer = [];
 
 function dfs(y, x) {
-    if (visited[y][x]) return 0;
+    if (visited[y][x]) return ;
 
     visited[y][x] = true;
     answer.push(maps[y][x]);
