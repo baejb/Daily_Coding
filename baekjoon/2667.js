@@ -1,5 +1,5 @@
 const fs = require('fs');
-const input = fs.readFileSync('example.txt').toString().trim().split('\n');
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 const [N] = input[0].split(' ').map(Number);
 
 let maps = Array.from({ length: N }, () => Array(N).fill(0));
