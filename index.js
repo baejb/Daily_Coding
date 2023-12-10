@@ -31,8 +31,9 @@ function dfs(y, x) {
             visited[y][x] += dfs(ty, tx);
         }
     }
-
+    
     return visited[y][x];
 }
 
 console.log(dfs(0, 0));
+console.log(visited);
