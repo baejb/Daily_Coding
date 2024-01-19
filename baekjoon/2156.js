@@ -5,7 +5,7 @@ let n = Number(input[0]);
 const wines = input.slice(1).map(Number);
 /*
 dp[n]을 n-1번째까지의 포도주 잔이 주어졌을 때 마실 수 있는 최대 값 
-경우는 마시거나 , 안마시거나 , 못마시거나 
+경우 
 */
 const dp = new Array(n).fill(0);
 
@@ -27,3 +27,6 @@ if (n === 1) {
 
     console.log(dp[n - 1]);
 }
+// dp[i - 1]: 현재 잔을 마시지 않는 경우, 이전 잔까지의 최대 양을 그대로 가져옴
+// dp[i - 2] + wines[i]: 현재 잔을 마시고, 이전 잔은 마시지 않는 경우, 현재 잔의 양을 더함
+// dp[i - 3] + wines[i - 1] + wines[i]: 현재 잔과 이전 잔을 마시고, 그 전 잔은 마시지 않는 경우, 현재 잔과 그 전 잔의 양을 더함
