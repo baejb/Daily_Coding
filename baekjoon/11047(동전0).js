@@ -6,7 +6,7 @@ let coinArr = [];
 let count = 0;
 
 for(let i = 1; i<= N; i++){
-    // if(input[i] < K) //K 보다 작을 때만 저장  -> 이 부분을 추가하면 틀린다 왜일까 ?
+    if(input[i] <= K) //K 보다 작거나 같을 때만 저장  
     coinArr.push(Number(input[i])); 
 }
 
