@@ -83,3 +83,23 @@ while(minHeap.size()> 0 ){
 }
 
 console.log(answer);
+
+/* 메모리 초과 
+let arr = input.slice(1).map(Number);
+let answer = 0;
+arr.sort((a,b)=> a-b);
+while(arr.length){
+    if(arr.length > 2){
+    let sum =arr.shift() + arr.shift();
+    answer += sum;
+    arr.push(sum);
+    // arr.sort((a,b)=>a-b);
+
+    }
+    else {
+        answer+= arr.shift();
+    }
+}
+console.log(answer);
+
+*/
