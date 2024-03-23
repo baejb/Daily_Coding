@@ -6,7 +6,7 @@ const [N, M] = input[0].split(' ').map(Number);
 //1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
 //고른 수열은 오름차순이어야 한다.
 let result = [];
-let visited = new Array(N + 1).fill(false); 
+
 
 function dfs(cnt, idx, sequence) { //cnt는 자리 수 , idx는 인덱스 ,sequence 는 현재 수열 
     if (cnt === M) {
